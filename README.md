@@ -8,7 +8,7 @@
 
 **বাজার দর (BazarDor)** হলো একটি আধুনিক, উচ্চগতিসম্পন্ন ও সম্পূর্ণ রেসপন্সিভ ওয়েব অ্যাপ্লিকেশন, যা প্রতিদিনের চাল, ডাল, তেল, সবজি, মাছ, মাংস ও মসলার সঠিক ও হালনাগাদ বাজার মূল্য এক নজরে উপস্থাপন করে। এটি সাধারণ ক্রেতা ও সচেতন নাগরিকদের সারা দেশের বিভিন্ন পাইকারি ও খুচরা বাজারের তুলনামূলক দর পর্যবেক্ষণ এবং সঠিক মূল্যে কেনাকাটার সিদ্ধান্ত নিতে সহায়তা করে।
 
-- 🌐 **লাইভ ডিপ্লয়মেন্ট (Live URL):** [https://b14-a7-bazar-dor.vercel.app](https://b14-a7-bazar-dor.vercel.app)
+- 🌐 **লাইভ ডিপ্লয়মেন্ট (Live URL):** [https://b14-a7-bazar-dor-gamma.vercel.app](https://b14-a7-bazar-dor-gamma.vercel.app)
 - 💻 **গিটহাব রিপোজিটরি (GitHub Repository):** [https://github.com/mahmudulhasanmaruf78/B14-A7-Bazar-Dor](https://github.com/mahmudulhasanmaruf78/B14-A7-Bazar-Dor)
 
 ---
@@ -165,7 +165,7 @@ B14-A7-Bazar-Dor/
 ## 📬 এসাইনমেন্ট সাবমিশন তথ্য (Submission Info)
 
 - **Repository Link:** [https://github.com/mahmudulhasanmaruf78/B14-A7-Bazar-Dor](https://github.com/mahmudulhasanmaruf78/B14-A7-Bazar-Dor)
-- **Live Deployment Link:** [https://b14-a7-bazar-Dor.vercel.app](https://b14-a7-bazar-dor.vercel.app)
+- **Live Deployment Link:** [https://b14-a7-bazar-dor-gamma.vercel.app](https://b14-a7-bazar-dor-gamma.vercel.app)
 
 ---
 
