@@ -3,17 +3,24 @@ import { mongodbAdapter } from 'better-auth/adapters/mongodb';
 import { db } from './mongodb';
 
 const getAuthBaseUrl = () => {
-  let url = 'http://localhost:3000';
-  if (process.env.BETTER_AUTH_URL) {
-    url = process.env.BETTER_AUTH_URL;
-  } else if (process.env.VERCEL_PROJECT_PRODUCTION_URL) {
-    url = `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
-  } else if (process.env.VERCEL_URL) {
-    url = `https://${process.env.VERCEL_URL}`;
-  } else if (process.env.NEXT_PUBLIC_APP_URL) {
-    url = process.env.NEXT_PUBLIC_APP_URL;
+  if (process.env.BETTER_AUTH_URL && !process.env.BETTER_AUTH_URL.includes('localhost')) {
+    return process.env.BETTER_AUTH_URL.replace(/\/+$/, '');
   }
-  return url.replace(/\/+$/, '');
+  if (process.env.VERCEL_PROJECT_PRODUCTION_URL) {
+    return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`.replace(/\/+$/, '');
+  }
+  if (process.env.VERCEL_URL) {
+    return `https://${process.env.VERCEL_URL}`.replace(/\/+$/, '');
+  }
+  if (process.env.NEXT_PUBLIC_APP_URL) {
+    return process.env.NEXT_PUBLIC_APP_URL.replace(/\/+$/, '');
+  }
+  if (process.env.BETTER_AUTH_URL) {
+    return process.env.BETTER_AUTH_URL.replace(/\/+$/, '');
+  }
+  return process.env.NODE_ENV === 'production'
+    ? 'https://b14-a7-bazar-dor-gamma.vercel.app'
+    : 'http://localhost:3000';
 };
 
 export const auth = betterAuth({
@@ -25,6 +32,7 @@ export const auth = betterAuth({
   trustedOrigins: [
     'http://localhost:3000',
     'http://127.0.0.1:3000',
+    'https://b14-a7-bazar-dor-gamma.vercel.app',
     ...(process.env.BETTER_AUTH_URL ? [process.env.BETTER_AUTH_URL] : []),
     ...(process.env.VERCEL_URL ? [`https://${process.env.VERCEL_URL}`] : []),
     ...(process.env.VERCEL_PROJECT_PRODUCTION_URL
